@@ -1,0 +1,516 @@
+@import 'vars';
+@import 'global';
+@import 'fonts';
+// start header
+.header {
+    position: relative;
+    &__inner {
+        position: absolute;
+        top: 60px;
+        img {
+            padding-left: 15px;
+            display: inline-block;
+        }
+    }
+}
+
+// end header
+// start main
+.main {
+    min-height: 950px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 110px;
+    &__content {
+        padding-left: 15px;
+        max-width: 480px;
+        color: $text;
+        &-title {
+            @include light;
+            font-size: 60px;
+        }
+        &-description {
+            @include regular;
+            font-size: 13px;
+            line-height: 23px;
+        }
+    }
+}
+
+// end main
+// start presentantion
+.presentation {
+    margin-bottom: 80px;
+}
+
+.presentation__inner {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &-img {
+        position: absolute;
+        right: -55px;
+        bottom: 210px;
+    }
+}
+
+.presentation__content {
+    width: 100%;
+    &-title {
+        display: inline-block;
+        color: $black;
+        @include light;
+        font-size: 35px;
+        margin-bottom: 40px;
+    }
+    &-text {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        @include regular;
+        color: $grey;
+        font-size: 14px;
+        line-height: 20px;
+        p {
+            max-width: 580px;
+            margin-bottom: 20px;
+            margin-top: 0;
+            padding-right: 10px;
+        }
+    }
+}
+
+// end presentation
+// start preferences
+.preferences {
+    margin-bottom: 95px;
+    margin-right: 0;
+    margin-left: auto;
+    max-width: 1920px;
+    width: 100%;
+    &__inner {
+        margin-right: 0;
+        margin-left: auto;
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1545px;
+        width: 100%;
+    }
+}
+
+.preferences__box {
+    width: 25%;
+    @include regular;
+    color: $text;
+    text-align: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 44px;
+    padding-right: 10px;
+    position: relative;
+    &-title {
+        @include light;
+        font-size: 30px;
+        margin-top: 45px;
+        margin-bottom: 17px;
+    }
+    &-text {
+        font-size: 13px;
+        line-height: 25px;
+        max-width: 305px;
+        margin-bottom: 25px;
+    }
+    &-link {
+        display: inline-block;
+        @include bold;
+        font-size: 14px;
+        color: $text;
+        margin-bottom: 50px;
+        max-width: 150px;
+        padding-right: 25px;
+        position: relative;
+        &::after {
+            content: "\f178";
+            font-family: 'icomoon';
+            position: absolute;
+            width: 13px;
+            height: 5px;
+            right: 0;
+            top: 2px;
+        }
+    }
+}
+
+.preferences__box.big-box {
+    width: 50%;
+    transition: all .7s;
+    &:hover {
+        background-image: url(../images/mountains-man.jpg) !important;
+    }
+}
+
+.preferences__box.new-background {
+    transition: all .7s;
+    &:hover {
+        background-image: url(../images/two-trees.jpg) !important;
+    }
+}
+
+.preferences__box.last-box {
+    background-size: auto 100%;
+}
+
+.preferences__box-button {
+    position: absolute;
+    bottom: 44px;
+    right: 44px;
+    &::before {
+        content: "\f08a";
+        font-family: 'icomoon';
+        width: 18px;
+        height: 18px;
+        color: $text;
+    }
+}
+
+.color-pink {
+    background-color: #f5989d;
+}
+
+.color-eggplant {
+    background-color: #615f7d;
+}
+
+.color-lilac {
+    background-color: #bd8cbf;
+}
+
+.color-green {
+    background-color: #82ca9c;
+}
+
+// end preferences
+// start details
+.details {
+    margin-bottom: 130px;
+    width: 100%;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
+
+.details__item {
+    width: 25%;
+    margin-bottom: 20px;
+    &-title {
+        @include semibold;
+        font-size: 13px;
+        color: $black;
+        margin-bottom: 25px;
+        text-align: left;
+        max-width: 250px;
+    }
+    &-text {
+        @include regular;
+        font-size: 14px;
+        line-height: 23px;
+        color: $grey;
+        max-width: 260px;
+    }
+}
+
+// end details
+// start power
+.power {
+    min-height: 885px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: $text;
+}
+
+.power__content {
+    max-width: 530px;
+    transform: translateY(60%);
+    &-title {
+        @include light;
+        font-size: 60px;
+        margin-bottom: 25px;
+    }
+    &-text {
+        @include regular;
+        font-size: 13;
+        line-height: 33px;
+        margin-bottom: 23px;
+    }
+    &-link {
+        display: inline-block;
+        @include bold;
+        font-size: 14px;
+        color: $text;
+        margin-bottom: 50px;
+        max-width: 150px;
+        padding-right: 25px;
+        position: relative;
+        &::after {
+            content: "\f178";
+            font-family: 'icomoon';
+            position: absolute;
+            width: 13px;
+            height: 5px;
+            right: 0;
+            top: 2px;
+        }
+    }
+}
+
+// end power
+// start reasons
+.reasons {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    background-color: $green;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .section__title {
+        color: $text;
+    }
+}
+
+.reasons__item {
+    max-width: 375px;
+    color: $text;
+    text-align: left;
+    font-size: 13px;
+    &-title {
+        @include semibold;
+        margin-bottom: 20px;
+    }
+    &-text {
+        @include regular;
+        line-height: 23px;
+    }
+}
+
+// end reasons
+// start cards
+.cards {
+    background-color: #f6f7fa;
+    padding-top: 100px;
+    padding-bottom: 140px;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+}
+
+.cards__item {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 45px 40px 45px 55px;
+    transition: all .5s;
+    &:hover {
+        background-color: $text;
+        box-shadow: 0px 0px 20px -3px rgba(0, 0, 0, 0.75);
+        .cards__item-popularity {
+            background-color: #bd8cbf;
+            color: #fff;
+        }
+    }
+    &-popularity {
+        padding: 6px 16px;
+        background-color: #e1e1e1;
+        @include extrabold;
+        font-size: 11px;
+        color: #fdfdfd;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        text-transform: uppercase;
+        transition: all .5s;
+    }
+    &-title {
+        @include light;
+        font-size: 30px;
+        line-height: 40px;
+        color: #2e3b4e;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    &-text {
+        @include regular;
+        font-size: 14px;
+        line-height: 25px;
+        color: #8297a7;
+        max-width: 480px;
+        margin-bottom: 25px;
+    }
+    &-btn {
+        background-color: $green;
+        color: $text;
+        @include bold;
+        font-size: 12px;
+        line-height: 22px;
+        border: none;
+        outline: none;
+        border-radius: 3px;
+        max-width: 270px;
+        text-transform: uppercase;
+        padding: 14px 28px;
+        margin-bottom: 20px;
+    }
+}
+
+.cards__item-links {
+    width: 100%;
+}
+
+.cards__item-apple {
+    margin-right: 15px;
+    &::before {
+        font-family: 'icomoon';
+        content: "\f179";
+        color: #c5c5c5;
+        font-size: 24px;
+    }
+}
+
+.cards__item-win {
+    &::before {
+        font-family: 'icomoon';
+        content: "\f17a";
+        color: #c5c5c5;
+        font-size: 24px;
+    }
+}
+
+// end cards 
+// start footer
+.footer {
+    background-color: #192431;
+    min-height: 605px;
+    display: flex;
+    align-items: center;
+    &__inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        color: $text;
+        a {
+            color: $text;
+        }
+    }
+}
+
+.footer__feedback,
+.footer__form {
+    width: 50%;
+}
+
+.footer__feedback {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 575px;
+}
+
+.footer__feedback-description {
+    margin-bottom: 70px;
+}
+
+.footer__description-title,
+.footer__links-title {
+    @include semibold;
+    font-size: 13px;
+    margin-bottom: 26px;
+}
+
+.footer__description-text {
+    @include regular;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.footer__feedback-links {
+    display: block;
+    width: 33.33%;
+    @include regular;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.footer__form {
+    padding-left: 100px;
+    form {
+        margin-bottom: 15px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    label {
+        display: block;
+        width: 100%;
+        @include semibold;
+        font-size: 13px;
+        line-height: 24px;
+        margin-bottom: 26px;
+    }
+    input {
+        height: 61px;
+        max-width: 405px;
+        width: 100%;
+        background-color: #f6f7fa;
+        border-radius: 3px 0px 0px 3px;
+        border: none;
+        outline: none;
+        padding-left: 10px;
+        padding-right: 10px;
+        @include regular;
+        font-size: 26px;
+        margin-right: 0;
+    }
+    button {
+        height: 61px;
+        margin-left: 0;
+        border: none;
+        outline: none;
+        background-color: $green;
+        border-radius: 0px 3px 3px 0px;
+        width: 100%;
+        max-width: 70px;
+        &::before {
+            content: "\f00c";
+            font-family: 'icomoon';
+            color: $text;
+            font-size: 30px;
+        }
+    }
+}
+
+.footer__form-text {
+    max-width: 345px;
+    @include regular;
+    font-size: 12px;
+    line-height: 18px;
+    color: #364455;
+}
+
+// end footer
+@import 'media';
